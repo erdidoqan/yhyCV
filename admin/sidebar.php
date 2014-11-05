@@ -4,7 +4,7 @@
             <h4 class="panel-title">Profil</h4>
         </div>
         <ul class="nav nav-pills nav-stacked">
-            <li><a href="#">Personal Profile</a></li>
+            <li><a href="per_pro.php">Personal Profile</a></li>
             <li><a href="#">Skills</a></li>
             <li><a href="#">Education</a></li>
             <li><a href="#">Experience</a></li>

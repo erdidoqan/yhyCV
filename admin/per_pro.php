@@ -35,7 +35,27 @@ if (isset($_SESSION)) {
                         <?php require_once("sidebar.php") ?>
                     </div>
                     <div class="col-xs-12 col-sm-8">
-                        
+                        <h4>Personal Profile Update</h4>
+                        <hr>
+                        <form action="per_pro.php" method="post">
+                        	<div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12" style="padding-bottom: 10px;">
+                                <label>Section Subtitle:</label>
+                                    <input class="form-control" name="subtitle" placeholder="Subtitle Update" type="text" required />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                <label>Article:</label>
+                                    <textarea style="resize:vertical;" class="form-control" placeholder="Article..." rows="6" name="article" required></textarea>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                <button type="submit" class="btn btn-success btn-lg">Send</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

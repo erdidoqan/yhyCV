@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default square" role="navigation" id="navbar">
     <div class="navbar-banner">
-        <a href="#" class="navbar-brand">Yahya Kanibol</a>                        
+        <a href="dashboard.php" class="navbar-brand">Yahya Kanibol</a>                        
     </div>
     <div class="navbar-header">
         <button type="button" class="navbar-toggle navbar-toggle-left" data-slide="right">

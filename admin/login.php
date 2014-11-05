@@ -27,6 +27,7 @@ if ($selectFlag) {
     if (mysql_num_rows($query) > 0) {
         $_SESSION['Enter'] = true;
         $_SESSION['user_id'] = mysql_result($query, 0, 'id');
+      //  var_dump($_SESSION);
         direct('dashboard.php');
     } else {
         $_SESSION['Enter'] = false;
