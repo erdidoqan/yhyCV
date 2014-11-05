@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+<?php include 'setting.php'; ?>
 <html class="no-js"> 
     <head>
       <?php require_once("header.php"); ?>
@@ -35,22 +37,24 @@
     <!-- profile begins -->
     <section id="page-profile" class="page-profile">
       <div class="container">
+      <?php $sql1 = ("SELECT * FROM tbl_personal_profile ORDER BY id DESC LIMIT 0,1");
+                     $result = mysql_query($sql1);
+                     while ($per_pro = mysql_fetch_array($result)) { ?>
                 <header class="section-header">
                     <h2 class="section-title">Personal Profile</h2>
                     <div class="spacer"></div>
-                    <p class="section-subtitle">Lorem ipsum dolor sit amet, id iusto oportere mel. </p>
+                       
+                    <p class="section-subtitle"><?php echo ($per_pro['subtitle']) ?> </p>
                 </header>
             <div class="row">
               <div class="col-md-3">
                  <div class="profile"><img src="img/profile.png" alt="profile"/></div> 
               </div>
+
                <div class="col-md-9">
-                <p>Lorem ipsum dolor sit amet, vel no saepe invenire, magna similique vis no. Eam tollit gloriatur ad, quaeque euismod tractatos usu eu. Apeirian detraxit consequat vis ne, natum brute quidam nec no. Sit in accusamus aliquando, an his aeque iusto delicata.</p>
-                <p>Facer libris qui ea, mel ludus persius suscipiantur te. Eos soleat inimicus liberavisse at. Ex sit mazim soluta lobortis, ut nec bonorum splendide, mel tation erroribus principes eu. Cum ne vero albucius disputando. Et vidit movet sea. Falli appetere ut vix, eu offendit sapientem est. Postulant delicatissimi ex mea, ne modo nostrud salutandi usu, cu ignota dissentiunt his.</p>
-                <p>No wisi hendrerit per, ius ei stet oportere scribentur. Nam ex quando petentium, ei sea sonet timeam. Ex erat docendi urbanitas vix, equidem appetere vix an, mei legere offendit ponderum te. In per vidit dicta democritum, ut fuisset voluptua repudiandae eum. Cum at eius reformidans. In vocent dolores eos, ea vel idque soluta similique.</p>
-                 <p>No wisi hendrerit per, ius ei stet oportere scribentur. Nam ex quando petentium, ei sea sonet timeam. Ex erat docendi urbanitas vix, equidem appetere vix an, mei legere offendit ponderum te. In per vidit dicta democritum, ut fuisset voluptua repudiandae eum.</p>
+                <?php echo ($per_pro['article']) ?> 
               </div>
-            </div>
+            </div><?php }?>
       </div> 
     </section><!-- profile ends -->
     <!-- skills begins -->

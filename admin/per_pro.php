@@ -63,5 +63,27 @@ if (isset($_SESSION)) {
     </div>
 </div>
 <script src="js/dash.js"></script>
+
+<?php 
+if (isset($_POST) && is_array($_POST) && count($_POST) > 0) {
+
+         $insertFlag = true;
+         if (isset($_POST['subtitle']) && $_POST['subtitle'] == "") {
+             echo "Write a subtitle";
+             $insertFlag = false;
+         }if (isset($_POST['article']) && $_POST['article'] == "") {
+             echo "Write a article";
+             $insertFlag = false;
+         }extract($_POST);
+         if ($insertFlag) {
+                @mysql_query("insert into tbl_personal_profile (subtitle,article) 
+                    values ('$subtitle','$article')");
+                    print '<script>alert("Article successfully updated");location.assign("per_pro.php");</script>';
+            }else{
+                direct('per_pro.php',2);
+            }
+                
+}
+?>
 </body>
 </html>
