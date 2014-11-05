@@ -144,40 +144,43 @@
     <!-- experience begins -->
      <section id="page-experience" class="page-experience">
        <div class="container">
+        <?php $sql1 = ("SELECT * FROM tbl_experience ORDER BY id DESC LIMIT 0,1");
+                     $result = mysql_query($sql1);
+                     while ($experience = mysql_fetch_array($result)) { ?>
                 <header class="section-header">
                     <h2 class="section-title"><span>Experience</span></h2>
                      <div class="spacer"></div>
-                    <p class="section-subtitle">Lorem ipsum dolor sit amet, id iusto oportere mel. </p>
+                    <p class="section-subtitle"><?php echo ($experience['subtitle']) ?></p>
                 </header>
                 <div class="row">
                  <div class="col-md-4">
                   <article class="experience">
                     <header>
-                      <h3>Dropbox</h3>
-                      <p>Design Lead / San Francisco, CA / 2013 - Current</p>
+                      <h3><?php echo ($experience['header_1']) ?></h3>
+                      
                     </header>
-                      <p>Lorem ipsum dolor sit amet, ut pri munere perfecto sadipscing, nam habeo legere disputationi ea. Vis nostrud intellegat eu, in vix erat abhorreant accommodare. Vix id elit albucius suavitate. Eos mentitum forensibus et. Vix et quidam moderatius, cu vim quem tibique constituam.</p>
+                      <p><?php echo ($experience['article_1']) ?></p>
                   </article>
                 </div>
                   <div class="col-md-4">
                   <article class="experience">
                     <header>
-                      <h3>Instagram</h3>
-                       <p>Visual Designer / San Francisco, CA / 2010 - 2013</p>
+                      <h3><?php echo ($experience['header_2']) ?></h3>
+                       
                     </header>
-                      <p>Lorem ipsum dolor sit amet, ut pri munere perfecto sadipscing, nam habeo legere disputationi ea. Vis nostrud intellegat eu, in vix erat abhorreant accommodare. Vix id elit albucius suavitate. Eos mentitum forensibus et. Vix et quidam moderatius, cu vim quem tibique constituam.</p>
+                      <p><?php echo ($experience['article_2']) ?></p>
                   </article>
                 </div>
                 <div class="col-md-4">
                 <article class="experience">
                   <header>
-                    <h3>Facebook</h3>
-                     <p>Product Designer / San Francisco, CA / 2005 - 2010</p>
+                    <h3><?php echo ($experience['header_3']) ?></h3>
+                     
                   </header>
-                    <p>Lorem ipsum dolor sit amet, ut pri munere perfecto sadipscing, nam habeo legere disputationi ea. Vis nostrud intellegat eu, in vix erat abhorreant accommodare. Vix id elit albucius suavitate. Eos mentitum forensibus et. Vix et quidam moderatius, cu vim quem tibique constituam.</p>
+                    <p><?php echo ($experience['article_3']) ?></p>
                 </article>
                 </div>
-            </div>
+            </div><?php } ?>
         </div>
     </section><!-- experience ends -->
     <!-- portfolio begins -->

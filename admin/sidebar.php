@@ -7,7 +7,7 @@
             <li><a href="per_pro.php">Personal Profile</a></li>
             <li><a href="skill.php">Skills</a></li>
             <li><a href="education.php">Education</a></li>
-            <li><a href="#">Experience</a></li>
+            <li><a href="experience.php">Experience</a></li>
         </ul>
     </div>
     <div class="panel panel-default">
