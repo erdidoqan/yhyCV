@@ -5,8 +5,8 @@
         </div>
         <ul class="nav nav-pills nav-stacked">
             <li><a href="per_pro.php">Personal Profile</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Education</a></li>
+            <li><a href="skill.php">Skills</a></li>
+            <li><a href="education.php">Education</a></li>
             <li><a href="#">Experience</a></li>
         </ul>
     </div>

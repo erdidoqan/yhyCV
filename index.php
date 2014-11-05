@@ -60,80 +60,85 @@
     <!-- skills begins -->
      <section id="page-skills" class="page-skills">
        <div class="container">
-           
+           <?php $sql1 = ("SELECT * FROM tbl_skills ORDER BY id DESC LIMIT 0,1");
+                     $result = mysql_query($sql1);
+                     while ($skills = mysql_fetch_array($result)) { ?>
                  <header class="section-header">
                     <h2 class="section-title"><span>Skills</span></h2>
                       <div class="spacer"></div>
-                    <p class="section-subtitle">Lorem ipsum dolor sit amet, id iusto oportere mel. </p>
+                    <p class="section-subtitle"><?php echo ($skills['subtitle']) ?> </p>
                 </header>
             <div class="row">
               <div class="col-md-2">
-               <span class="chart" data-percent="100">
+               <span class="chart" data-percent="<?php echo ($skills['percentages_1']) ?>">
                       <span class="percent"></span>
-                      <h3>Photoshop</h3>
+                      <h3><?php echo ($skills['skill_1']) ?></h3>
                </span>
             </div>
                <div class="col-md-2 ">
-               <span class="chart" data-percent="90">
+               <span class="chart" data-percent="<?php echo ($skills['percentages_2']) ?>">
                       <span class="percent"></span>
-                      <h3>Illustrator</h3>
+                      <h3><?php echo ($skills['skill_2']) ?></h3>
                </span>
             </div>
                <div class="col-md-2">
-               <span class="chart" data-percent="95">
+               <span class="chart" data-percent="<?php echo ($skills['percentages_3']) ?>">
                       <span class="percent"></span>
-                       <h3>AutoCAD</h3>
+                       <h3><?php echo ($skills['skill_3']) ?></h3>
                </span>
             </div>
                <div class="col-md-2">
-               <span class="chart" data-percent="80">
+               <span class="chart" data-percent="<?php echo ($skills['percentages_4']) ?>">
                       <span class="percent"></span>
-                      <h3>CSS</h3>
+                      <h3><?php echo ($skills['skill_4']) ?></h3>
                </span>
             </div>
                <div class="col-md-2">
-               <span class="chart" data-percent="65">
+               <span class="chart" data-percent="<?php echo ($skills['percentages_5']) ?>">
                       <span class="percent"></span>
-                      <h3>jQuery</h3>
+                      <h3><?php echo ($skills['skill_5']) ?></h3>
                </span>
             </div>
                <div class="col-md-2">
-               <span class="chart" data-percent="85">
+               <span class="chart" data-percent="<?php echo ($skills['percentages_6']) ?>">
                       <span class="percent"></span>
-                       <h3>PHP</h3>
+                       <h3><?php echo ($skills['skill_6']) ?></h3>
                </span>
             </div>
-          </div>
+          </div><?php } ?>
         </div>
     </section><!-- skills ends -->
     <!-- education begins -->
      <section id="page-education" class="page-education">
        <div class="container">
+       <?php $sql1 = ("SELECT * FROM tbl_education ORDER BY id DESC LIMIT 0,1");
+                     $result = mysql_query($sql1);
+                     while ($education = mysql_fetch_array($result)) { ?>
                 <header class="section-header">
                     <h2 class="section-title"><span>Education</span></h2>
                      <div class="spacer"></div>
-                    <p class="section-subtitle">Lorem ipsum dolor sit amet, id iusto oportere mel. </p>
+                    <p class="section-subtitle"><?php echo ($education['subtitle']) ?> </p>
                 </header>
                 <div class="row">
                  <div class="col-md-6">
                   <article class="education">
                     <header>
-                      <h3>School of the Art Institute of Chicago</h3>
-                      <p>Bachelor of Fine Arts - <strong>Graduated:</strong> 2004</p>
+                      <h3><?php echo ($education['header_1']) ?></h3>
+                      
                     </header>
-                      <p>Lorem ipsum dolor sit amet, ut pri munere perfecto sadipscing, nam habeo legere disputationi ea. Vis nostrud intellegat eu, in vix erat abhorreant accommodare. Vix id elit albucius suavitate. Eos mentitum forensibus et. Vix et quidam moderatius, cu vim quem tibique constituam.</p>
+                      <p><?php echo ($education['article_1']) ?></p>
                   </article>
                 </div>
                 <div class="col-md-6">
                 <article class="education">
                   <header>
-                    <h3>Rhode Island School of Design</h3>
-                    <p>Associates of Fine Arts  - <strong>Graduated:</strong> 2002</p>
+                    <h3><?php echo ($education['header_2']) ?></h3>
+                    
                   </header>
-                    <p>Lorem ipsum dolor sit amet, ut pri munere perfecto sadipscing, nam habeo legere disputationi ea. Vis nostrud intellegat eu, in vix erat abhorreant accommodare. Vix id elit albucius suavitate. Eos mentitum forensibus et. Vix et quidam moderatius, cu vim quem tibique constituam.</p>
+                    <p><?php echo ($education['article_2']) ?></p>
                 </article>
                 </div>
-            </div>
+            </div><?php } ?>
        </div>
     </section><!-- education ends -->
     <!-- experience begins -->
