@@ -37,36 +37,27 @@ if (isset($_SESSION)) {
                         <?php require_once("sidebar.php") ?>
                     </div>
                     <div class="col-xs-12 col-sm-8">
-                        <h4>Portfolio Subtitle Update</h4>
+                        <h4>Images Update</h4>
                         <hr>
-                           <form action="portfolio.php" method="post">
+                           <form action="images.php" method="post">
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-sm-12" style="padding-bottom: 10px;">
-                                    <label>Section Subtitle:</label>
-                                        <input class="form-control" name="subtitle" placeholder="Subtitle Update" type="text" required />
-                                    </div>
+                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                     <label>Filters:</label>
                                         
                                     </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                     <input class="form-control" name="url" placeholder="URL" type="text" required />
+
+                                     </div>
+                                      <div class="col-lg-4 col-md-4 col-sm-4">
                                      <input class="form-control" name="filter_1" placeholder="Filter 1" type="text" required />
                                         
                                     </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-3">
-                                     <input class="form-control" name="filter_2" placeholder="Filter 2" type="text" required />
-                                        
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-3">
-                                     <input class="form-control" name="filter_3" placeholder="Filter 3" type="text" required />
-                                        
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-3">
-                                     <input class="form-control" name="filter_4" placeholder="Filter 4" type="text" required />
-                                        
-                                    </div>
+                                    
                                 </div><br>
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-sm-12">
@@ -86,25 +77,21 @@ if (isset($_SESSION)) {
 if (isset($_POST) && is_array($_POST) && count($_POST) > 0) {
 
          $insertFlag = true;
-         if (isset($_POST['subtitle']) && $_POST['subtitle'] == "") {
+         if (isset($_POST['url']) && $_POST['url'] == "") {
              echo "Write a subtitle";
              $insertFlag = false;
-         }if (isset($_POST['filter_1']) && $_POST['filter_1'] == "") {
-             echo "Write a header";
-        }if (isset($_POST['filter_2']) && $_POST['filter_2'] == "") {
+         
+        }if (isset($_POST['filter_1']) && $_POST['filter_1'] == "") {
              echo "Write a article 1";
-        }if (isset($_POST['filter_3']) && $_POST['filter_3'] == "") {
-             echo "Write a header 2";
-        }if (isset($_POST['filter_4']) && $_POST['filter_4'] == "") {
-             echo "Write a article 2";
+        
              $insertFlag = false;
          }extract($_POST);
          if ($insertFlag) {
-                @mysql_query("insert into tbl_portfolio (subtitle,filter_1,filter_2,filter_3,filter_4) 
-                    values ('$subtitle','$filter_1','$filter_2','$filter_3','$filter_4')");
-                    print '<script>alert("Portfolio successfully updated");location.assign("portfolio.php");</script>';
+                @mysql_query("insert into tbl_images (url,filter_1) 
+                    values ('$url','$filter_1')");
+                    print '<script>alert("images successfully updated");location.assign("images.php");</script>';
             }else{
-                direct('portfolio.php',2);
+                direct('images.php',2);
             }
                 
 }

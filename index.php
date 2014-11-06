@@ -186,22 +186,25 @@
     <!-- portfolio begins -->
      <section id="page-portfolio" class="page-portfolio">
           <div class="container">
+          <?php $sql1 = ("SELECT * FROM tbl_portfolio ORDER BY id DESC LIMIT 0,1");
+                     $result = mysql_query($sql1);
+                     while ($portfolio = mysql_fetch_array($result)) { ?>
             <div class="row">
                 <header class="section-header">
                     <h2 class="section-title"><span>Portfolio</span></h2>
                       <div class="spacer"></div>
-                    <p class="section-subtitle">Lorem ipsum dolor sit amet, id iusto oportere mel. </p>
+                    <p class="section-subtitle"><?php echo ($portfolio['subtitle']) ?> </p>
                 </header>
            
                 <div id="grid-controls-wrapper">
                 <ul class="nav nav-pills center-pills grid-controls">
                   <li class="active filter"><a href="javascript:void(0)" data-filter="*">All</a></li>
-                  <li class="filter" ><a href="javascript:void(0)" data-filter=".branding">Branding</a></li>   
-                  <li class="filter" ><a href="javascript:void(0)" data-filter=".design">Design</a></li>            
-                  <li class="filter"><a href="javascript:void(0)"  data-filter=".photography">Photography</a></li>
-                  <li class="filter" ><a href="javascript:void(0)" data-filter=".web">Website</a></li>
+                  <li class="filter" ><a href="javascript:void(0)" data-filter=".branding"><?php echo ($portfolio['filter_1']) ?></a></li>   
+                  <li class="filter" ><a href="javascript:void(0)" data-filter=".design"><?php echo ($portfolio['filter_2']) ?></a></li>            
+                  <li class="filter"><a href="javascript:void(0)"  data-filter=".photography"><?php echo ($portfolio['filter_3']) ?></a></li>
+                  <li class="filter" ><a href="javascript:void(0)" data-filter=".web"><?php echo ($portfolio['filter_4']) ?></a></li>
                 </ul>
-              </div>
+              </div><?php } ?>
               <?php require_once("portifolio.php"); ?>
             </div>
         </div>

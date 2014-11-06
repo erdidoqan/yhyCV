@@ -15,8 +15,8 @@
             <h4 class="panel-title">Portfolio</h4>
         </div>
             <ul class="nav nav-pills nav-stacked">
-            <li><a href="#">Menu Item 1</a></li>
-            <li><a href="#">Menu Item 2</a></li>
+            <li><a href="portfolio.php">Subtitle</a></li>
+            <li><a href="images.php">Images</a></li>
             <li><a href="#">Menu Item 3</a></li>
         </ul>
     </div>
