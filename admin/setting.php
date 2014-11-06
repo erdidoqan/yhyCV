@@ -1,5 +1,5 @@
 <?php
-@mysql_connect("", "testuser","testuser")
+@mysql_connect("94.73.151.254", "yhyknbl","yhyknbl")
         or die("Connection could not be established with database!");
 @mysql_select_db("yhyknbl")
         or die("There was an error in our database!");

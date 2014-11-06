@@ -7,13 +7,13 @@ include 'setting.php';
 $selectFlag = true;
 
 if (isset($_POST['email']) && $_POST['email'] == "") {
-    echo "Enter your mail";
+    echo '<script>alert("Mail Adresini yaz LAN!");  window.location.assign("index.php");</script>';
     $selectFlag = false;
     direct('index.php',2);
 }
 
 if (isset($_POST['password']) && $_POST['password'] == "") {
-    echo "Enter your password";
+    echo '<script>alert("Adam gibi sifreni yaz OLM!");  window.location.assign("index.php");</script>';
     $selectFlag = false;
     direct('index.php',2);
 }
@@ -31,7 +31,7 @@ if ($selectFlag) {
         direct('dashboard.php');
     } else {
         $_SESSION['Enter'] = false;
-        print '<script>alert("Email and Password could not matched!");  window.location.assign("index.php");</script>';
+        print '<script>alert("Sunlari adam gibi yaz ya Emailin yada Sifren yanlis :)!");  window.location.assign("index.php");</script>';
         datedit('index.php',2);
     }
 }

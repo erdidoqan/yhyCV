@@ -94,8 +94,9 @@ $('.chart').waypoint(function() {
 	
 		$.vegas('slideshow', {
 			  backgrounds:[
-				
-				
+				{ src:'img/slider/kus.jpg', fade:1000 },
+                { src:'img/slider/manzara.jpg', fade:1000 },
+                { src:'img/slider/cicek.jpg', fade:1000 }
 			  ]
 			})('overlay', {
 			  src:'img/overlays/16.png'

@@ -18,7 +18,7 @@
             <div class="row">
                 <header class="centered">
                     <h1>Yahya Kanibol</h1>
-                    <p>PROFESSIONAL ARCHITECTURE</p>
+                    <p>Architect</p>
                 </header>
                 <div class="social-icons">
                         <a href="https://twitter.com/" target="_blank" class="btn btn-round btn-clear btn-twitter"><i class="fa fa-twitter"></i></a>

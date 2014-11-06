@@ -1,11 +1,11 @@
 <div>
   <ul id="grid" class="grid-wrapper">
       <li class="mix web" >
-        <a href="img/portfolio/large/01.png">
+        <a href="http://i.imgur.com/XOlqEN5.jpg">
           <div class="overlay">
             <i class="fa fa-search"></i>
           </div>
-          <img src="img/portfolio/small/01.png"  alt="" >
+          <img src="http://i.imgur.com/XOlqEN5.jpg"  alt="" >
         </a> 
       </li>
       <li class="mix design">
