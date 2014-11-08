@@ -53,9 +53,22 @@ if (isset($_SESSION)) {
                                      <input class="form-control" name="url" placeholder="URL" type="text" required />
 
                                      </div>
-                                      <div class="col-lg-4 col-md-4 col-sm-4">
-                                     <input class="form-control" name="filter_1" placeholder="Filter 1" type="text" required />
-                                        
+                                     <?php
+                                        $query = ("SELECT * from tbl_portfolio order by id DESC LIMIT 0,1");
+                                        $result = mysql_query($query);
+                                     ?>
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <select name="filter_1" class="form-control">
+                                            <option value="">Filters</option>
+                                            <?php
+                                            while($row = @mysql_fetch_array($result)){
+                                            ?>
+                                            <option value="<?php echo $row["filter_1"]; ?>"><?php echo ucwords($row["filter_1"]); ?></option>
+                                            <option value="<?php echo $row["filter_2"]; ?>"><?php echo ucwords($row["filter_2"]); ?></option>
+                                            <option value="<?php echo $row["filter_3"]; ?>"><?php echo ucwords($row["filter_3"]); ?></option>
+                                            <option value="<?php echo $row["filter_4"]; ?>"><?php echo ucwords($row["filter_4"]); ?></option>
+                                            <?php } ?>
+                                        </select> 
                                     </div>
                                     
                                 </div><br>
