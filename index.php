@@ -204,9 +204,9 @@
                   <li class="filter"><a href="javascript:void(0)"  data-filter=".photography"><?php echo ($portfolio['filter_3']) ?></a></li>
                   <li class="filter" ><a href="javascript:void(0)" data-filter=".web"><?php echo ($portfolio['filter_4']) ?></a></li>
                 </ul>
-              </div>
+              </div><?php } ?>
               <?php require_once("portifolio.php"); ?>
-            </div><?php } ?>
+            </div>
         </div>
     </section><!-- portfolio ends -->
     <!-- contact begins -->
