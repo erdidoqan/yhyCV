@@ -15,7 +15,7 @@
         </a> 
       </li><?php } ?>
       <?php 
-      $sql = ("SELECT * from tbl_images where filter_1='design' order by id");
+      $sql = ("SELECT * from tbl_images where filter_1='desing' order by id");
         $result = mysql_query($sql);
         while ($filter_1 = mysql_fetch_array($result)) {
     ?>
