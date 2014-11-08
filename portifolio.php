@@ -2,7 +2,8 @@
 
   <ul id="grid" class="grid-wrapper">
   <?php 
-    $sql = ("SELECT * from tbl_images where filter_1='branding' order by id");
+  var_dump($portfolio['filter_1']);exit;
+    $sql = ("SELECT * from tbl_images where filter_1=" . $portfolio['filter_1']);
       $result = mysql_query($sql);
       while ($filter_1 = mysql_fetch_array($result)) {
   ?>
