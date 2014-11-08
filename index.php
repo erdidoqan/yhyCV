@@ -205,7 +205,11 @@
                   <li class="filter" ><a href="javascript:void(0)" data-filter=".web"><?php echo ($portfolio['filter_4']) ?></a></li>
                 </ul>
               </div>
+<<<<<<< HEAD
               <?php include("portifolio.php"); ?>
+=======
+              <?php require_once("portifolio.php"); ?>
+>>>>>>> origin/master
             </div><?php } ?>
         </div>
     </section><!-- portfolio ends -->
