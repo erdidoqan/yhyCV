@@ -2,11 +2,11 @@
 
   <ul id="grid" class="grid-wrapper">
   <?php 
-    $sql = ("SELECT * from tbl_images where filter_1='branding' order by id");
+    $sql = ("SELECT * from tbl_images where filter_1='$portfolio['filter_1']' order by id");
       $result = mysql_query($sql);
       while ($filter_1 = mysql_fetch_array($result)) {
   ?>
-      <li class="mix web" >
+      <li class="mix branding" >
         <a href="<?php echo ($filter_1['url']) ?>">
           <div class="overlay">
             <i class="fa fa-search-plus"></i>
@@ -19,7 +19,7 @@
         $result = mysql_query($sql);
         while ($filter_1 = mysql_fetch_array($result)) {
     ?>
-      <li class="mix branding">
+      <li class="mix desing">
         <a href="<?php echo ($filter_1['url']) ?>">
           <div class="overlay">
             <i class="fa fa-search-plus"></i>
@@ -45,7 +45,7 @@
         $result = mysql_query($sql);
         while ($filter_1 = mysql_fetch_array($result)) {
     ?>
-      <li class="mix design">
+      <li class="mix web">
         <a href="<?php echo ($filter_1['url']) ?>">
           <div class="overlay">
             <i class="fa fa-search-plus"></i>
