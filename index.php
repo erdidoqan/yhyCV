@@ -215,14 +215,15 @@
               <header class="section-header">
                   <h2 class="section-title"><span>Contact</span></h2>
                     <div class="spacer"></div>
-                       <p class="section-subtitle">Lorem ipsum dolor sit amet, id iusto oportere mel. </p>
+                       <p class="section-subtitle">Contact Information </p>
               </header>
         <div class="row">
           <div class="col-sm-5 contact-info">
             <h3>Contact Info</h3>
-            <p><i class="fa fa-map-marker"></i> 1234 State St., Little Rock, AR  72020 </p>
-            <p><i class="fa fa-phone"></i> (555) 123-4567 | (555) 123-7654 (FAX)</p>
-            <p><i class="fa fa-envelope-o"></i> articulate@email.com</p>
+            <p><i class="fa fa-map-marker"></i> Istanbul </p>
+            <p><i class="fa fa-phone"></i> +90 (553) 586 98 08</p>
+            <p><i class="fa fa-envelope-o"></i> <a style="color:white;" href="mailto:info@yhyknbl.com?Subject=Hello%20again" target="_top">
+info@yhyknbl.com</a> </p>
           </div>
           
           <div class="col-sm-7">
@@ -256,7 +257,21 @@
         </div>
     </section> <!-- contact ends -->
 
-
+<div class="footer">
+  <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left"> Copyright ©  2015. All right reserved. Created by, <a href="https://www.facebook.com/erdi.doqan">Erdi Dogan</a></p>
+            <div class="pull-right">
+                <ul class="nav nav-pills payments">
+                  <li><i class="fa fa-cc-visa"></i></li>
+                    <li><i class="fa fa-cc-mastercard"></i></li>
+                    <li><i class="fa fa-cc-amex"></i></li>
+                    <li><i class="fa fa-cc-paypal"></i></li>
+                </ul> 
+            </div>
+        </div>
+    </div>
+</div>
         
     </body>
 </html>

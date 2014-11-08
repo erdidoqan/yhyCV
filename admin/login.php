@@ -32,7 +32,6 @@ if ($selectFlag) {
     } else {
         $_SESSION['Enter'] = false;
         print '<script>alert("Sunlari adam gibi yaz ya Emailin yada Sifren yanlis :)!");  window.location.assign("index.php");</script>';
-        datedit('index.php',2);
     }
 }
 ?>
