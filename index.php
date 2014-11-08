@@ -205,11 +205,9 @@
                   <li class="filter" ><a href="javascript:void(0)" data-filter=".web"><?php echo ($portfolio['filter_4']) ?></a></li>
                 </ul>
               </div>
-<<<<<<< HEAD
-              <?php include("portifolio.php"); ?>
-=======
+
               <?php require_once("portifolio.php"); ?>
->>>>>>> origin/master
+
             </div><?php } ?>
         </div>
     </section><!-- portfolio ends -->
@@ -232,7 +230,7 @@ info@yhyknbl.com</a> </p>
           
           <div class="col-sm-7">
           <h3>Get in Touch</h3>
-              <form  class="form-horizontal" id="contact-form">
+              <form action="getintouch.php" method="post" class="form-horizontal" id="contact-form">
         <div class="control-group">
             <label class="control-label" for="name">Name</label>
             <div class="controls">

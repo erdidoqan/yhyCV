@@ -2,13 +2,10 @@
 
   <ul id="grid" class="grid-wrapper">
   <?php 
-<<<<<<< HEAD
-  var_dump($portfolio['filter_1']);exit;
-    $sql = ("SELECT * from tbl_images where filter_1=" . $portfolio['filter_1']);
-=======
+
   $por_fil = $portfolio['filter_1'];
   $sql = ("SELECT * from tbl_images where filter_1='$por_fil' order by id");
->>>>>>> origin/master
+
       $result = mysql_query($sql);
       while ($filter_1 = mysql_fetch_array($result)) {
   ?>
