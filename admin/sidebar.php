@@ -17,7 +17,7 @@
             <ul class="nav nav-pills nav-stacked">
             <li><a href="portfolio.php">Subtitle</a></li>
             <li><a href="images.php">Images</a></li>
-            <li><a href="#">Menu Item 3</a></li>
+            <li><a href="allimages.php">All Images</a></li>
         </ul>
     </div>
     <div class="panel panel-default">
