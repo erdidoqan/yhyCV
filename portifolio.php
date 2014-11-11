@@ -2,10 +2,15 @@
 
   <ul id="grid" class="grid-wrapper">
   <?php 
+<<<<<<< Updated upstream
 
   $por_fil = $portfolio['filter_1'];
   $sql = ("SELECT * from tbl_images where filter_1='$por_fil' order by id");
 
+=======
+  $por_fil = $portfolio['filter_1'];
+  $sql = ("SELECT * from tbl_images where filter_1='$por_fil' order by id");
+>>>>>>> Stashed changes
       $result = mysql_query($sql);
       while ($filter_1 = mysql_fetch_array($result)) {
   ?>

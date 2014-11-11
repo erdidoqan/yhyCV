@@ -205,9 +205,13 @@
                   <li class="filter" ><a href="javascript:void(0)" data-filter=".web"><?php echo ($portfolio['filter_4']) ?></a></li>
                 </ul>
               </div>
+<<<<<<< Updated upstream
 
               <?php require_once("portifolio.php"); ?>
 
+=======
+              <?php require_once("portifolio.php"); ?>
+>>>>>>> Stashed changes
             </div><?php } ?>
         </div>
     </section><!-- portfolio ends -->

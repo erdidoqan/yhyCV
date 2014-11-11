@@ -4,6 +4,7 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Erdi Dogan">
+<link rel="shortcut icon" href="/img/icon.ico" type="image/x-icon">
 
 
 <!-- All CSS -->
